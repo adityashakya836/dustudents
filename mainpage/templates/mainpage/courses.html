@@ -1,0 +1,30 @@
+{% extends 'mainpage/base.html' %}
+{% block title %}Program{% endblock  %}
+{% load static %}
+{% block css %}
+<link rel='stylesheet' href="{% static 'css/courses.css' %}"
+{% endblock  %}
+{% block body %}
+{% if program %}
+<div class="container">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Program</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for pograms in program %}
+    <tr>
+      <td>{{pograms.program_id}}</td>
+      <td><a href="/course/{{pograms.program_id}}">{{pograms}}</a></a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% else %}
+<h3>Program not added yet</h3>
+{% endif %}
+{% endblock %}

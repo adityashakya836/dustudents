@@ -1,0 +1,101 @@
+{% extends 'blog/base.html' %}
+{% load social_share %}
+{% block title %}
+{{blogpost.blog_title}}
+{% endblock %}
+{% block body %}
+{% load get_dict %}
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row">
+                <img src="/media/{{blogpost.blog_img}}" width="233px" height="230px">
+                <span><h6>Blog Category-{{blogpost.blog_category}}</h6></span>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <h5>{{blogpost.blog_sub_title}}</h5>
+            <p>{{blogpost.blog_description|safe}}</p>
+            <p>by-{{blogpost.blog_by}} {{blogpost.pub_data}}<span>({{blogpost.views}}views)</span></p>
+            <div class="d-flex">
+                <a>{% post_to_facebook object_or_url%}</a>
+                <a>{% post_to_linkedin object_or_url %}</a>
+                <a>{% post_to_whatsapp object_or_url "Share Via whatsapp"%}</a>
+            </div>
+            <div class="containter">
+                <!--Comments-->
+                <h2>Comments({{comments.count}})</h2>
+                <form action="/blogs/comments/" method="post">{% csrf_token %}
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Post Comment </label>
+                        <input type="text" class="form-control" name="comment" placeholder="Enter comment here">
+                    </div>
+                    <input type="hidden" name="postId" value="{{blogpost.id}}">
+                    <input type="hidden" name="parentId" value="">
+
+                    {% if user.is_active %}
+                    <button type="submit" class="btn btn-primary">Comment as {{user.username}}</button>
+                    {% else %}
+                    <input type="submit" value="Comment" class="btn btn-primary" disabled>
+                    <span>Login to post a comment</span>
+                    {% endif %}
+                </form>
+                {% for comment in comments %}
+                <div class="row my-3">
+                    <div class="col-md-1">
+                        <img class="rounded mx-auto d-block" src="/media/user.png" alt="user" width="23px"
+                            height="23px">
+                    </div>
+                    <div class="col-md-11 ">
+                        {% load humanize %}
+                        <b> {{comment.user.username}} </b> <span
+                            class="badge bg-secondary">{{comment.timestamp | naturaltime}}</span><br>
+                        {{comment.comment}}<br>
+
+                        <button class="btn btn-sm btn-primary" type="button" data-toggle="collapse"
+                            data-target="#replyBox{{comment.id}}" aria-expanded="false"
+                            aria-controls="replyBox{{comment.id}}">
+                            Reply
+                        </button>
+
+                        <div class="collapse" id="replyBox{{comment.id}}">
+                            <div class="card card-body my-2">
+                                <form action="/blogs/comments/" method="post">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="comment">Post a reply </label>
+                                        <input type="text" class="form-control" name="comment"
+                                            placeholder="Enter comment here">
+                                        <input type="hidden" name="parentId" value="{{comment.id}}">
+                                    </div>
+                                    <input type="hidden" name="postId" value="{{blogpost.id}}">
+                                    {% if user.is_active %}
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    {% else %}
+                                    <button type="submit" class="btn btn-primary" disabled>Login to reply</button>
+                                    {% endif %}
+                                </form>
+                            </div>
+                        </div>
+                        <div class="replies my-2">
+                            {% for reply in replies|get_val:comment.id %}
+                            <div class="col-md-1">
+                                <img class="rounded mx-auto d-block" src="/media/user.png" alt="user" width="23px"
+                                    height="23px">
+                            </div>
+                            <div class="col-md-11 ">
+                                <span>{{reply.comment}} by {{user.username}}</span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

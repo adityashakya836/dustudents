@@ -1,0 +1,47 @@
+.container {
+    height: 100%;
+    margin-top: 5px;
+    width: 40%;
+    border: none;
+}
+
+.card {
+    height: 100vh;
+}
+
+.card h5 {
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(197, 190, 190);
+    opacity: 0.9;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card p {
+    font-size: 20px;
+    opacity: 0.9;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 5px;
+    font-weight: lighter;
+}
+
+#bgimg {
+    max-height: 70vh;
+    width: 100%;
+    opacity: 0.6;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+#quote {
+    font-style: italic;
+    font-weight: bold;
+}
+
+span {
+    font-weight: bold;
+}

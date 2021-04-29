@@ -1,0 +1,31 @@
+{% extends 'mainpage/base.html' %}
+{% block title %}Courses{% endblock  %}
+{% load static %}
+{% block css %}
+<link rel='stylesheet' href="{% static 'css/course.css' %}"
+{% endblock  %}
+{% block body %}
+{% if course %}
+<div class="container">
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Course</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for courses in course  %}
+    <tr>
+      <td>{{courses.course_id}}</td>
+      <td><a href="/subject/{{courses.course_id}}/">{{courses.course_name}}</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+{% else %}
+<h3>Course not added yet</h3>
+{% endif %}
+{% endblock %}

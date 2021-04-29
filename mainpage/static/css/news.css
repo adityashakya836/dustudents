@@ -1,0 +1,26 @@
+.container {
+    margin-top: 5px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+}
+
+.card a {
+    color: rgb(112, 218, 182);
+}
+
+.container a:hover {
+    text-decoration: none;
+    color: rgb(161, 240, 214);
+}
+
+.clearfix {
+    text-align: center;
+    justify-content: center;
+}
+
+#image {
+    width: 100%;
+    margin: 3px;
+    max-height: 70vh;
+}

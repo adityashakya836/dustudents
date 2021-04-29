@@ -1,0 +1,25 @@
+img {
+    margin-top: 35px;
+    opacity: 0.2;
+}
+
+.container {
+    align-items: center;
+    text-align: center;
+    margin: 30px;
+    background-color: rgb(221, 235, 217);
+    opacity: 0.7;
+}
+
+.container a:hover {
+    text-decoration: none;
+    color: rgb(55, 241, 70);
+}
+
+.container a {
+    text-align: center;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: #000;
+}

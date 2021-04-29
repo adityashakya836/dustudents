@@ -1,0 +1,59 @@
+#image {
+    width: 50%;
+    margin-left: 80px;
+    height: 10vh;
+    margin-top: 2px;
+}
+
+.card {
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    border: 2px solid black;
+    float: left;
+}
+
+.card a {
+    color: rgb(8, 187, 77);
+    font-size: 20px;
+}
+
+.card a:hover {
+    text-decoration: none;
+    color: rgb(161, 240, 214);
+}
+
+.clearfix {
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    justify-content: baseline;
+}
+
+.clearfix a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+.clearfix a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.next {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.round {
+    border-radius: 50%;
+}

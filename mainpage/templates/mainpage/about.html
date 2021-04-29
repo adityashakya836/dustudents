@@ -1,0 +1,40 @@
+{% extends 'mainpage/base.html' %}
+{% block title %}About{% endblock  %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}"
+{% endblock %}
+
+{% block body %}
+<img src="/media/aboutus.jpg" alt="background image" class="img-thumbnail" id="bgimg">
+<hr>
+<div class="container">
+
+
+
+<div class="card bg-white text-dark">
+  <div class="card-img-overlay">
+    <h5 class="card-title">About Us</h5>
+    {% comment %} <p class="card-text">We, some UG students of Shyam Lal College of Delhi University. We planned to help our dear friends i.e., other Students of DU by providing them <strong>Study Material</strong> such as <strong>Notes</strong> and <strong>Books</strong>. When we were freshers we faced a lot of problems in finding best books, notes, and a proper guidance. We want no one else to face the problem we faced. 
+
+We come up with an idea of making a website DU Students where you all can find all the related study materials like Book, Notes, latest Syllabus, DU Updates etc. This site is here for each and every Students. 
+
+</p><p class="card-text">Our members are <strong>Arun Kumar</strong>, <strong>Aditya Shakya</strong>, <strong>Harsh Verma</strong>,<strong> Jitendra</strong> And <strong>Nitish Kumar</strong> with beautiful idea. We are also providing Blog section where you all can show your writing skills and you all will get chance to get your write-ups published. For that you all have to share your write-ups with us and we will post it as soon as possible. 
+
+For any query and any material do you want please directly contact us. We will provide you all the study materials as soon as possible.</p> {% endcomment %}
+
+        <p id = 'quote'>"The only thing that you absolutely have know, is the location of library."</p>
+        <p>Bonjour!</p>
+        <p>We, the students of Shyam Lal College, University of Delhi, have excogitated to provide help to our beloved fellows. We are working on a platform (website) that would provide the students of University of Delhi, easy access to <span> study material i.e. books and notes.</span></p>
+        <p>When we were freshers, we had to face issues related to availability of books. We didn't had proper understanding as to which book should we prefer and purchase. </p>
+        <p>The website will consist of a <span>blog section</span> as well where in, all of you will get a chance to showcase your creative talent and getting your articles published. All that you need to do is share your writeups with us and we'll get it <span> posted on our website. </span></p>
+        <p>You can contact the undersigned for any queries.</p>
+        <div id='signed'>
+            <p><span>Arun Kumar</span> <br> <span>Mob. no.- 9625377894</span></p>
+            
+            <p><span>Aditya Shakya</span><br><span>Mob. no.- +91 87005 11472</span></p>
+  </div>
+</div>
+</div>
+
+{% endblock  %}
