@@ -18,11 +18,15 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.static import serve
+from django.conf.urls import url
 admin.site.site_header="DU Students Admin"
 admin.site.site_title="DU Students Admin Panel"
 admin.site.index_title="Welcome To Du Students Admin Panel"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('mainpage.urls')),
-    path('blogs/',include('blog.urls'))
+    path('blogs/',include('blog.urls')),
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
