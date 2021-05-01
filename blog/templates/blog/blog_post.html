@@ -3,6 +3,10 @@
 {% block title %}
 {{blogpost.blog_title}}
 {% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/blogpost.css' %}"
+{% endblock %}
 {% block body %}
 {% load get_dict %}
 <div class="container my-4">
@@ -18,9 +22,9 @@
             <p>{{blogpost.blog_description|safe}}</p>
             <p>by-{{blogpost.blog_by}} {{blogpost.pub_data}}<span>({{blogpost.views}}views)</span></p>
             <div class="d-flex">
-                <a>{% post_to_facebook object_or_url%}</a>
-                <a>{% post_to_linkedin object_or_url %}</a>
-                <a>{% post_to_whatsapp object_or_url "Share Via whatsapp"%}</a>
+                <a>{% post_to_facebook object_or_url "<i class='fab fa-facebook'></i>"%}</a>
+                <a id="linkedin">{% post_to_linkedin "<i class='fab fa-linkedin-in'></i>" %}</a>
+                <a>{% post_to_whatsapp object_or_url "<i class='fab fa-whatsapp'></i>" %}</a>
             </div>
             <div class="containter">
                 <!--Comments-->
@@ -34,9 +38,9 @@
                     <input type="hidden" name="parentId" value="">
 
                     {% if user.is_active %}
-                    <button type="submit" class="btn btn-primary">Comment as {{user.username}}</button>
+                    <button type="submit" class="btn btn-outline-success">Comment as {{user.username}}</button>
                     {% else %}
-                    <input type="submit" value="Comment" class="btn btn-primary" disabled>
+                    <input type="submit" value="Comment" class="btn btn-outline-success" disabled>
                     <span>Login to post a comment</span>
                     {% endif %}
                 </form>
@@ -52,7 +56,7 @@
                             class="badge bg-secondary">{{comment.timestamp | naturaltime}}</span><br>
                         {{comment.comment}}<br>
 
-                        <button class="btn btn-sm btn-primary" type="button" data-toggle="collapse"
+                        <button class="btn btn-outline-success" type="button" data-toggle="collapse"
                             data-target="#replyBox{{comment.id}}" aria-expanded="false"
                             aria-controls="replyBox{{comment.id}}">
                             Reply
@@ -70,9 +74,9 @@
                                     </div>
                                     <input type="hidden" name="postId" value="{{blogpost.id}}">
                                     {% if user.is_active %}
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-outline-success">Submit</button>
                                     {% else %}
-                                    <button type="submit" class="btn btn-primary" disabled>Login to reply</button>
+                                    <button type="submit" class="btn btn-outline-success" disabled>Login to reply</button>
                                     {% endif %}
                                 </form>
                             </div>

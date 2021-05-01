@@ -8,10 +8,11 @@
 
 <img src="/media/bg.jpg" class="img-thumbnail" alt="">
 <hr>
-
+{% if blogpost %}
 <div class="container mt-2">
-
+    
     <h3>Latest Blog</h3>
+    
     {% for post in blogpost %}
     {% if forloop.counter0|divisibleby:3 %} <div class="row text-center"> {%  endif %}
         <div class="card mx-auto my-2 p-2 align-items-center" style="width: 18rem;" id="{{forloop.counter}}">
@@ -24,16 +25,23 @@
                     <div class="preview">{{post.blog_description|slice:"0:130"|safe}}.....</div>
                 </p>
                 <small>by {{post.blog_by}} at {{post.pub_data}}</small>
+                <div class="stick">
                 <a href="/blogs/blogpost/{{post.blog_title}}" class="btn btn-outline-success">Continue
                     reading&raquo;</a>
+                </div>
             </div>
 
         </div>
         {%  if forloop.counter|divisibleby:3 or forloop.last %}</div><a href="/blogs/ourblog/" class="btn btn-outline-success float-right" style="margin-top:8px;">Read More&raquo;</a><!-- row closing -->{%  endif %}
     {% endfor %}
     
+    
+    
 </div>
-
+{% else %}
+    No blog added yet<br>
+{% endif %}
+{% if news %}
 <div class="container my-5">
     <h3>Latest News</h3>
     {% for post in news %}
@@ -54,6 +62,9 @@
         {%  if forloop.counter|divisibleby:3 or forloop.last %}</div><a href="/news/" class="btn btn-outline-success float-end" style="margin-top:8px;" >Read More&raquo;</a><!-- row closing -->{%  endif %}
     {% endfor %}
 </div>
+{% else %}
+No news added yet<br>
+{% endif %}
 
 {% endblock  %}
 {% block js %}

@@ -21,3 +21,13 @@ img {
 hr {
     line-height: 2px;
 }
+
+.padded {
+    max-height: 145px;
+    width: 100%;
+    opacity: 0.8;
+}
+
+h3 {
+    border-radius: 10px;
+}

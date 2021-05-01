@@ -55,6 +55,7 @@ class Subject(models.Model):
     subject_previous_year_paper=models.FileField(upload_to="pyq/",blank=True,default="")
 
     reference_books=models.FileField(upload_to="referencebooks/",default="",blank=True)
+    reference_links=models.URLField(max_length=300,default="",blank=True)
     sub_name=models.CharField(max_length=255,default="")
     subject_description=models.TextField(blank=True)
     sem = (

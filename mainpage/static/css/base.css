@@ -1,0 +1,36 @@
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: DarkSalmon;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(241, 234, 234);
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #61A1DD;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #a8a6a6;
+    transition: all 0.3s;
+    font-size: 30px;
+}
+
+.social-media a:hover {
+    color: #61A1DD;
+}
+
+.social-media a:not(:last-child) {
+    margin-right: 28px;
+}

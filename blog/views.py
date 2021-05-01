@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.core import paginator
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from . models import Myblogpost,Comments
@@ -7,7 +8,7 @@ from django.core.paginator import Paginator
 # Create your views here.
 def blog(request):
     post=Myblogpost.objects.all().order_by('-pub_data')
-    paginator=Paginator(post,10)
+    paginator=Paginator(post,5)
     page_number=request.GET.get('page')
     page_obj=paginator.get_page(page_number)
 
@@ -47,17 +48,24 @@ def blogpost(request,slug):
 def search(request):
     query=request.GET['query']
     # allPosts=Myblogpost.objects.all()
-    if len(query)>40:
+    if len(query)==0:
+        messages.warning(request,"Please enter a keyword to search something.")
+        return redirect("/blogs/ourblog/")
+    elif len(query)>40:
         allPosts=Myblogpost.objects.none()
     else:
         allPostsTitle=Myblogpost.objects.filter(blog_title__icontains=query)
         allPostsContent=Myblogpost.objects.filter(blog_description__icontains=query)
         allPosts=allPostsTitle.union(allPostsContent)
+        paginator=Paginator(allPosts,5)
+        page_number=request.GET.get('page')
+        page_obj=paginator.get_page(page_number)
+
 
     blog_label=Myblogpost.objects.values('blog_category')
     category={item['blog_category'] for item in blog_label}
         
-    params={'page_obj':allPosts,'query':query,'category':category}
+    params={'page_obj':page_obj,'query':query,'category':category}
     return render(request,'blog/search.html',params)
 
 def comment(request):

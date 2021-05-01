@@ -1,0 +1,23 @@
+.container {
+    align-items: center;
+    justify-content: center;
+    margin-left: 45px;
+}
+
+.d-flex {
+    margin: 5px;
+}
+
+.d-flex a {
+    text-decoration: none;
+    color: #565656;
+    transition: all 0.3s;
+    font-size: 30px;
+    margin: 5px;
+}
+
+#linkedin {
+    margin-bottom: 15px;
+    width: 65px;
+    margin-left: 15px;
+}

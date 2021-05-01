@@ -41,6 +41,15 @@
 </div>
 
 <div class='container'>
+    {% if subs.reference_links %}
+    <a href="{{subs.reference_links}}"  class="link-success" target="blank">Reference Link</a><br>
+
+    {% else %}
+    No Reference Book Added
+    {% endif %}
+</div>
+
+<div class='container'>
     {{subs.subject_description|safe}}
 
 </div>
