@@ -24,3 +24,7 @@
     margin: 3px;
     max-height: 70vh;
 }
+
+.text-center {
+    border-radius: 10px;
+}
