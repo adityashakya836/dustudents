@@ -98,3 +98,7 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
+def search(request):
+    query=request.GET['query']
+    allProg=Program.objects.filter(program_name__icontains=query)
+    return render(request,"mainpage/search.html",{'query':allProg})

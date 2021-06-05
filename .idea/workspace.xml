@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a980706d-0868-4811-82a3-125d82e53a6f" name="Default Changelist" comment="" />
+    <list default="true" id="a980706d-0868-4811-82a3-125d82e53a6f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainpage/static/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/mainpage/static/css/about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainpage/templates/mainpage/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainpage/templates/mainpage/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainpage/templates/mainpage/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainpage/templates/mainpage/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainpage/templates/mainpage/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainpage/templates/mainpage/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainpage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainpage/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainpage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainpage/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1s0ynD8MvV0hs6EHDEWNTfLTzko" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -16,6 +29,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a980706d-0868-4811-82a3-125d82e53a6f" name="Default Changelist" comment="" />

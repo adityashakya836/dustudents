@@ -83,7 +83,7 @@ def comment(request):
             parent=Comments.objects.get(id=parentId)
             comment=Comments(comment=comment,user=user,post=post,parent=parent)
             comment.save()
-            messages.success(request,"Your comment have been posted successfully")
+            messages.success(request,"Your reply have been posted successfully")
 
     return redirect(f'/blogs/blogpost/{post.blog_title}')
 

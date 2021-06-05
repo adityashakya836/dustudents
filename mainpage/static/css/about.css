@@ -3,12 +3,18 @@
     margin-top: 5px;
     width: 40%;
     border: none;
+    border-radius: 50px;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.22), rgba(255, 255, 255, 0.25));
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -10px -10px 12px 0 rgba(255, 255, 255, 0.3);
 }
 
 #bgimg {
     max-height: 70vh;
     width: 100%;
     opacity: 0.6;
+    border-radius: 50px;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.22), rgba(255, 255, 255, 0.25));
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -10px -10px 12px 0 rgba(255, 255, 255, 0.3);
 }
 
 .strong {
@@ -31,4 +37,13 @@ span {
 
 #about {
     text-align: center;
+}
+
+#signed a {
+    color: black;
+}
+
+#signed a:hover {
+    text-decoration: none;
+    color: black;
 }

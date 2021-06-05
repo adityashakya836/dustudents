@@ -1,0 +1,33 @@
+{% extends 'mainpage/base.html' %}
+{% block title %}
+Search
+{% endblock %}
+{% load static %}
+{% block css %}
+<link rel='stylesheet' href="{% static 'css/courses.css' %}"
+{% endblock  %}
+{% block body %}
+
+{% if query %}
+<div class="container">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Program</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for prog in query %}
+    <tr>
+      <td>{{prog.program_id}}</td>
+      <td><a href="/course/{{prog.program_id}}">{{prog}}</a></a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% else %}
+<h3>Program not added yet</h3>
+{% endif %}
+{% endblock %}

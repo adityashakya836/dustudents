@@ -1,0 +1,45 @@
+{% extends 'blog/base.html' %}
+{% block title %}Search Results{% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/search.css' %}">
+{% endblock  %}
+
+{% block body %}
+<div class="container">
+  {% if page_obj|length < 1 %}
+
+  Your search - <strong>{{query}}</strong><br>... - did not match any documents.<br>
+
+  Suggestions:
+  <ul>
+    <li>Make sure that all words are spelled correctly.</li>
+    <li>Try different keywords.</li>
+    <li>Try more general keywords.</li>
+  </ul>
+  {% else %}
+  <h3>Search Result for :{{query}}</h3>
+  {% for posts in page_obj %}
+  <div class="card1">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/media/{{posts.blog_img}}" class="center mt-3" alt="..." id="image">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+      <a href="/blogs/blogpost/{{posts.blog_title}}">
+        <h5 class="card-title">{{posts.blog_title}}</h5>
+        <p class="card-text"><div class="preview">{{posts.blog_description|slice:"0:130"|safe}}.....</div></p>
+        </a>
+        <p class="card-text"><small class="text-muted">Posted by {{posts.blog_by}}
+            {{posts.pub_data}}{% comment "" %}<span>({{posts.views}}views)</span>{% endcomment %}</small></p>
+            
+      </div>
+    </div>
+  </div>
+</div>
+  {% endfor %}
+  {% endif %}
+</div>
+{% endblock  %}
+

@@ -5,8 +5,14 @@
     font-style: normal;
 }
 
-.card a {
-    color: rgb(112, 218, 182);
+.card1 {
+    border-radius: 50px;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.22), rgba(255, 255, 255, 0.25));
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -10px -10px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+.card1 a {
+    color: rgb(12, 12, 12);
 }
 
 .container a:hover {
@@ -23,8 +29,18 @@
     width: 100%;
     margin: 3px;
     max-height: 70vh;
+    border-radius: 50px;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.22), rgba(255, 255, 255, 0.25));
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -10px -10px 12px 0 rgba(255, 255, 255, 0.3);
 }
 
 .text-center {
     border-radius: 10px;
+}
+
+.text-center {
+    padding: 8px;
+    border-radius: 50px;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.22), rgba(255, 255, 255, 0.25));
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -10px -10px 12px 0 rgba(255, 255, 255, 0.3);
 }

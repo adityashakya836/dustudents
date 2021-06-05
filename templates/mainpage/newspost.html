@@ -1,0 +1,25 @@
+{% extends 'mainpage/base.html' %}
+{% block title %}{{news.news_title}}{% endblock  %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/newspost.css' %}">
+{% endblock %}
+{% block body %}
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-4">
+                <div class="row">
+                    <img src="/media/{{news.news_image}}" width="233px" height="230px">
+                </div>
+        </div>
+        <div class="col-md-8">
+            <h3>{{news.news_category}}</h3>
+            <div class="news">
+            <p>{{news.news_description|safe}}</p>
+            <p>{{news.news_date}}</p>   
+            </div>         
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

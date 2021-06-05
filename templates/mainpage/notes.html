@@ -1,0 +1,62 @@
+{% extends 'mainpage/base.html' %}
+{% block title %}notes{% endblock  %}
+{% block body %}
+{% if sub %}
+{% for subs in sub %}
+<h3 class="text-center m-3 bg-secondary p-3 alert-dark rounded-3">{{subs.subject_name}}</h3>
+<div class='container'>
+    <a href="/media/{{subs.subjet_syllabus}}" class="link-success" target="blank">Syllabus</a><br>
+</div>
+<div class='container'>
+    <a href="/media/{{subs.subject_notes}}" class="link-success" target="blank">Notes</a><br>
+</div>
+<div class='container'>
+    {% if subs.subject_practicals_list %}
+    <a href="/media/{{subs.subject_practicals_list}}" class="link-success"  target="blank">Practical List</a><br>
+    {% else %}
+    No Practical List Added
+    {% endif %}
+</div>
+<div class='container'>
+    {% if subs.subject_practicals %}
+    <a href="/media/{{subs.subject_practicals}}" class="link-success"  target="blank">Practicals</a><br>
+    {% else %}
+    No Practicals Added
+    {% endif %}
+</div>
+<div class='container'>
+    {% if subs.subject_previous_year_paper %}
+    <a href="/media/{{subs.subject_previous_year_paper}}"  class="link-success" target="blank">Previous Year Question Paper</a><br>
+    {% else %}
+    No Previous Year Question Added
+    {% endif %}
+</div>
+<div class='container'>
+    {% if subs.reference_books %}
+    <a href="/media/{{subs.reference_books}}"  class="link-success" target="blank">Reference Book</a><br>
+
+    {% else %}
+    No Reference Book Added
+    {% endif %}
+</div>
+
+<div class='container'>
+    {% if subs.reference_links %}
+    <a href="{{subs.reference_links}}"  class="link-success" target="blank">Reference Link</a><br>
+
+    {% else %}
+    No Reference Book Added
+    {% endif %}
+</div>
+
+<div class='container'>
+    {{subs.subject_description|safe}}
+
+</div>
+
+{% endfor %}
+
+{% else %}
+<h2>Notes not uploaded yet</h2>
+{% endif %}
+{% endblock %}
