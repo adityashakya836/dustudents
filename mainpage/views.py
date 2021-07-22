@@ -46,16 +46,18 @@ def newspost(request,title):
     return render(request,'mainpage/newspost.html',{'news':news[0]})
 
 
-def course(request,program_id):
-    course=Course.objects.filter(program_id=program_id)
+def course(request,program_name):
+    prog=Program.objects.get(program_name=program_name)
+    course=Course.objects.filter(program=prog)
     return render(request,'mainpage/course.html',{'course':course})
 
-def subject(request,course_id):
-    subject=Subject.objects.filter(course_id=course_id)
+def subject(request,course_name):
+    cour=Course.objects.get(course_name=course_name)
+    subject=Subject.objects.filter(course=cour)
     return render(request,'mainpage/subject.html',{'subject':subject})
 
-def subdetails(request,subject_id):
-    sub=Subject.objects.filter(subject_id=subject_id)
+def subdetails(request,subject_name):
+    sub=Subject.objects.filter(subject_name=subject_name)
     return render(request,'mainpage/notes.html',{'sub':sub})
 
 def signup(request):

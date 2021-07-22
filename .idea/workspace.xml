@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a980706d-0868-4811-82a3-125d82e53a6f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainpage/static/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/mainpage/static/css/about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainpage/templates/mainpage/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainpage/templates/mainpage/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainpage/templates/mainpage/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainpage/templates/mainpage/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainpage/templates/mainpage/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainpage/templates/mainpage/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu_website/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_website/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainpage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainpage/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainpage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainpage/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/blog_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/blog_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mainpage/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mainpage/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mainpage/course.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mainpage/course.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mainpage/courses.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mainpage/courses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mainpage/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mainpage/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mainpage/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mainpage/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mainpage/subject.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mainpage/subject.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

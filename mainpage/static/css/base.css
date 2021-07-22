@@ -20,6 +20,8 @@ footer {
     padding: 3px;
     background-color: #408ad9;
     color: white;
+    bottom: 0;
+    /* position: absolute; */
 }
 
 footer a {

@@ -168,3 +168,5 @@ SITE_ID = 3
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+#https://www.section.io/engineering-education/django-google-oauth/ how to connect with google

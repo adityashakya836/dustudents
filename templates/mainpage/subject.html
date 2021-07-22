@@ -1,4 +1,4 @@
-{% extends 'mainpage/base.html' %}
+{% extends 'base.html' %}
 {% block title %}Subject{% endblock  %}
 {% load static %}
 {% block css %}
@@ -18,9 +18,9 @@
   <tbody>
   {% for subjects in subject  %}
     <tr>
-      <td>{{subjects.sub_sem}}</td>
-      <td>{{subjects.sub_name}}</td>
-      <td><a href="/notes/{{subjects.subject_id}}/">{{subjects.subject_name}}</a></td>
+      <td><h4>{{subjects.sub_sem}}</h4></td>
+      <td><h4>{{subjects.sub_name}}</h4></td>
+      <td><a href="/notes/{{subjects.subject_name}}/">{{subjects.subject_name}}</a></td>
     </tr>
   {% endfor %}
   </tbody>

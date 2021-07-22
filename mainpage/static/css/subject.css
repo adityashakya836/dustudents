@@ -2,13 +2,15 @@
     align-items: center;
     text-align: center;
     margin: 30px;
-    background-color: rgb(221, 235, 217);
-    opacity: 0.6;
+    opacity: 0.7;
+    border-radius: 50px;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.22), rgba(255, 255, 255, 0.25));
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -10px -10px 12px 0 rgba(255, 255, 255, 0.3);
 }
 
 .container a:hover {
     text-decoration: none;
-    color: rgb(55, 241, 70);
+    color: rgb(219, 55, 241);
 }
 
 .container a {

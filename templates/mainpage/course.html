@@ -1,4 +1,4 @@
-{% extends 'mainpage/base.html' %}
+{% extends 'base.html' %}
 {% block title %}Courses{% endblock  %}
 {% load static %}
 {% block css %}
@@ -18,7 +18,7 @@
   {% for courses in course  %}
     <tr>
       <td>{{courses.course_id}}</td>
-      <td><a href="/subject/{{courses.course_id}}/">{{courses.course_name}}</a></td>
+      <td><a href="/subject/{{courses.course_name}}/">{{courses.course_name}}</a></td>
     </tr>
   {% endfor %}
   </tbody>

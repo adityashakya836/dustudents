@@ -1,4 +1,4 @@
-{% extends 'blog/base.html' %}
+{% extends 'base.html' %}
 {% load social_share %}
 {% block title %}
 {{blogpost.blog_title}}
@@ -48,7 +48,7 @@
                 <div class="row my-3">
                     <div class="col-md-1">
                         <img class="rounded mx-auto d-block" src="/media/user.png" alt="user" width="23px"
-                            height="23px">
+                            height="23px" style="position:sticky;">
                     </div>
                     <div class="col-md-11 ">
                         {% load humanize %}
@@ -85,7 +85,7 @@
                             {% for reply in replies|get_val:comment.id %}
                             <div class="col-md-1">
                                 <img class="rounded mx-auto d-block" src="/media/user.png" alt="user" width="23px"
-                                    height="23px">
+                                    height="23px" style="position:sticky;">
                             </div>
                             <div class="col-md-11 ">
                                 <span>{{reply.comment}} by {{user.username}}</span>

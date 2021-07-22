@@ -1,4 +1,4 @@
-{% extends 'mainpage/base.html' %}
+{% extends 'base.html' %}
 {% block title %}
 Search
 {% endblock %}
@@ -21,7 +21,7 @@ Search
   {% for prog in query %}
     <tr>
       <td>{{prog.program_id}}</td>
-      <td><a href="/course/{{prog.program_id}}">{{prog}}</a></a></td>
+      <td><a href="/course/{{prog.program_name}}">{{prog}}</a></a></td>
     </tr>
   {% endfor %}
   </tbody>
