@@ -1,0 +1,77 @@
+img {
+    max-height: 70vh;
+    width: 96%;
+    opacity: 0.8;
+    border-radius: 50px;
+    margin: 10px;
+    background: linear-gradient(-45deg, rgba(204, 184, 184, 0.22), rgba(255, 255, 255, 0.25));
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -10px -10px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+.container h3 {
+    text-align: center;
+    background-color: #b3e2f5;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50px;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.22), rgba(255, 255, 255, 0.25));
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -10px -10px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+.container {
+    height: auto;
+    width: 100%;
+    border-radius: 50px;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.22), rgba(255, 255, 255, 0.25));
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -10px -10px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+.card1 {
+    border-radius: 50px;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.22), rgba(255, 255, 255, 0.25));
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -10px -10px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+hr {
+    line-height: 2px;
+}
+
+.padded {
+    max-height: 145px;
+    margin: 2px;
+    width: 100%;
+    opacity: 0.8;
+}
+
+h3 {
+    border-radius: 10px;
+}
+
+.card1 a {
+    text-decoration: none;
+    padding: 4px;
+    color: black;
+    border-radius: 50px;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.22), rgba(255, 255, 255, 0.25));
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -10px -10px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+.card1 a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.button1 {
+    float: right;
+    color: black;
+    padding: 6px;
+    margin: 4px;
+    border-radius: 50px;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.22), rgba(255, 255, 255, 0.25));
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -10px -10px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+.button1:hover {
+    text-decoration: none;
+    color: black;
+}
