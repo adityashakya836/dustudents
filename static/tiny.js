@@ -5,7 +5,7 @@ document.head.appendChild(script);
 
 script.onload = function() {
     tinymce.init({
-        selector: "#id_blog_description",
+        selector: "#id_blog_description,#id_subject_description",
         height: 656,
         plugins: [
             'codesample advlist autolink link image lists charmap print preview hr anchor pagebreak',
